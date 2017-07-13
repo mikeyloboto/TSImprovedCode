@@ -5,8 +5,8 @@ import java.util.Map;
 public class CalculateUtil {
 	
 	
-	private static final float Imported_Item_Tax=(float) 0.15; // That is 15%.
-    private static final float Standard_Tax=(float) 0.10; // That is 10%.
+	private static final float IMPORTED_ITEM_TAX = (float) 0.15; // That is 15%.
+	private static final float STANDARD_TAX = (float) 0.10; // That is 10%.
 	
 	//Rounding Function which rounds the number in 2 Digit after decimal point.
     public static float rounding(double value) {
@@ -46,9 +46,9 @@ public class CalculateUtil {
                 // Calculate the taxes
                 if (itemDescription.toLowerCase().contains("imported")) {
                     // Imported items
-                    tax = rounding(totalIteamPriceWithoutTax*Imported_Item_Tax); // Extra 5% tax on
+                    tax = rounding(totalIteamPriceWithoutTax * IMPORTED_ITEM_TAX); // Extra 5% tax on
                 } else {
-                    tax = rounding(totalIteamPriceWithoutTax*Standard_Tax);
+                    tax = rounding(totalIteamPriceWithoutTax * STANDARD_TAX);
                 }
 
                 // Calculate the total price
